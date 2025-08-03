@@ -39,9 +39,33 @@ function MostrarLista (){
     }
 
 }
+//>
+
+function sortearAmigo (){
+
+    
+
+    let nombresDeAmigos = Math.floor(Math.random() * nombres.length);
+    let eligiendoGanador =  nombres [nombresDeAmigos];
+    let nombreGanador = document.getElementById ("resultado")
+    nombreGanador.textContent = `el ganador es ${eligiendoGanador} `
+    limpiarLista ()
+
+}
+
+function limpiarLista (){
+    let listaLlena = document.querySelector ("#listaAmigos").value = "";
+
+    let botonSortear = document.getElementById ("BotonSortear")
+
+    botonSortear.textContent ("Hacer otro sorteo")
+
+     document.getElementById ("resultado").value ="";
 
 
 
+
+}
  
 
  
