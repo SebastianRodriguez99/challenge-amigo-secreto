@@ -17,12 +17,29 @@ function agregarAmigo (){
     }
     
    nombres.push(nombre)
+   MostrarLista();
 
    IdHtml.value = "";
+   //.focus ( hace que el cursor se vuelva a poner en el lugar blanco)
    IdHtml.focus ();
    console.log (nombres)
 
 }
+
+function MostrarLista (){
+    // For (inicio;condicion;incremento)
+
+    let listaAmigos = document.getElementById ("listaAmigos")
+    listaAmigos.innerHTML =""
+
+    for( let i=0 ; i < nombres.length ; i++  ) {
+        let item = document.createElement ("li");
+        item.textContent = nombres [i]
+        listaAmigos.appendChild (item);
+    }
+
+}
+
 
 
  
